@@ -34,6 +34,7 @@ export const HamburgerButton = styled.button`
     border: none;
     color: white;
     font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
 `;
 
@@ -43,9 +44,9 @@ export const DropdownMenu = styled.div`
     right: 0;
     background: white;
     color: black;
-    border: 1px solid #ddd;
+    border: 1px solid #c9c9c9;
     border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 
     ul {
@@ -58,7 +59,7 @@ export const DropdownMenu = styled.div`
             cursor: pointer;
 
             &:hover {
-                background-color: #f0f0f0;
+                background-color: #e8e5e5;
             }
         }
     }
