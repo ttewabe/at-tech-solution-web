@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
-import {
-    HeaderContainer,
-    Logo,
-    ContactInfo,
-    HamburgerContainer,
-    HamburgerButton,
-    DropdownMenu,
-} from './Header.style';
+import {HeaderContainer, Logo, ContactInfo,HamburgerContainer, HamburgerButton, DropdownMenu} from './Header.style';
+
 
 export const Header: React.FC = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
 
+    
     const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
     return (
