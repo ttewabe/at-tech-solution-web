@@ -15,10 +15,29 @@ export const Logo = styled.div`
     font-weight: bold;
 `;
 
-export const ContactInfo = styled.div`
+export const HeaderDetails = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
+    gap: 15px;
+`;
+
+export const HeaderNavitems = styled.div`
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+
+    span {
+        cursor: pointer;
+    }
+`;
+
+export const ContactInfo = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 20px;
 
     span {
         font-size: 14px;

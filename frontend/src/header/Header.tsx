@@ -5,8 +5,10 @@ import {
     ContactInfo,
     HamburgerContainer,
     HamburgerButton,
-    DropdownMenu,
+    HeaderDetails,
+    HeaderNavitems,
 } from './Header.style';
+import DropdownMenuComponent from '../components/dropdownMenuComponent/DropdownMenuComponent';
 
 export const Header: React.FC = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -16,23 +18,21 @@ export const Header: React.FC = () => {
     return (
         <HeaderContainer>
             <Logo>AT Tech</Logo>
-            <ContactInfo>
-                <span>Contact: +1-123-456-7890</span>
-                <span>Email: info@attechsolution.com</span>
-            </ContactInfo>
+            <HeaderDetails>
+                <ContactInfo>
+                    <span>Contact: +1-123-456-7890</span>
+                    <span>Email: info@attechsolution.com</span>
+                </ContactInfo>
+                <HeaderNavitems>
+                    <span>Home</span>
+                    <span>About</span>
+                    <span>Services</span>
+                    <span>Contact</span>
+                </HeaderNavitems>
+            </HeaderDetails>
             <HamburgerContainer>
                 <HamburgerButton onClick={toggleMenu}>☰</HamburgerButton>
-                {isMenuOpen && (
-                    <DropdownMenu>
-                        <ul>
-                            <li>Website Development</li>
-                            <li>Application Development</li>
-                            <li>Business Card Development</li>
-                            <li>Teaching Coding</li>
-                            <li>Social Services</li>
-                        </ul>
-                    </DropdownMenu>
-                )}
+                {isMenuOpen && (<DropdownMenuComponent />)}
             </HamburgerContainer>
         </HeaderContainer>
     );
