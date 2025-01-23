@@ -17,12 +17,12 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTelegram, FaYoutube, FaPhone } f
 import { FaXmark, FaEnvelope } from 'react-icons/fa6';
 
 // Let's take out the dropdown menu from the header and make it a separate component in this file
-const DropdownMenuComponent: React.FC = () => {
+const DropdownMenuComponent: React.FC<{ setMenuOpen: (isOpen: boolean) => void }> = ({ setMenuOpen }) => {
     return (
         <DropdownMenu>
             <DropdownMenuContent>
                 <OneLineContainer>
-                    <CloseButton>{<FaXmark size={25} />}</CloseButton>
+                    <CloseButton onClick={() => setMenuOpen(false)}>{<FaXmark size={25} />}</CloseButton>
                 </OneLineContainer>
                 <DropdownLogoContainer>
                     <Logo>AT Tech</Logo>
