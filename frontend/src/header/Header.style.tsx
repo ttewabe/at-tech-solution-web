@@ -98,6 +98,7 @@ export const CloseButton = styled.div`
     border-radius: 50%;
     border: solid 1px #a2a2a2;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    cursor: pointer;
 `;
 
 export const DropdownMenuContent = styled.div`
