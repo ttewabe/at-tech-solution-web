@@ -10,9 +10,11 @@ import {
     HeaderMainLine,
 } from './Header.style';
 import DropdownMenuComponent from '../components/dropdownMenuComponent/DropdownMenuComponent';
+import MenuDetails from '../components/menuDetails/MenuDetails';
 
 export const Header: React.FC = () => {
-    const [isMenuOpen, setMenuOpen] = useState(false);
+    const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
+    const [isMenuDetailsOpen, setMenuDetailsOpen] = useState<boolean>(false);
 
     const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
@@ -33,7 +35,11 @@ export const Header: React.FC = () => {
                 <HeaderDetails>
                     <HeaderNavitems>
                         <span>Home</span>
-                        <span>Services</span>
+                        <span
+                            onMouseEnter={() => setMenuDetailsOpen(true)}
+                            onMouseLeave={() => setMenuDetailsOpen(false)}>
+                            Services
+                        </span>
                         <span>Portfolio</span>
                         <span>About</span>
                         <span>Contact Us</span>
@@ -44,6 +50,7 @@ export const Header: React.FC = () => {
                 <HamburgerButton onClick={toggleMenu}>☰</HamburgerButton>
                 {isMenuOpen && <DropdownMenuComponent setMenuOpen={setMenuOpen} />}
             </HamburgerContainer>
+            {isMenuDetailsOpen && <MenuDetails />}
         </HeaderContainer>
     );
 };
