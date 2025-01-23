@@ -7,6 +7,7 @@ import {
     HamburgerButton,
     HeaderDetails,
     HeaderNavitems,
+    HeaderMainLine,
 } from './Header.style';
 import DropdownMenuComponent from '../components/dropdownMenuComponent/DropdownMenuComponent';
 
@@ -18,21 +19,24 @@ export const Header: React.FC = () => {
     return (
         <HeaderContainer>
             <Logo>AT Tech</Logo>
-            <HeaderDetails>
+            <HeaderMainLine>
                 <ContactInfo>
                     <span>Contact: +1-123-456-7890</span>
                     <span>Email: info@attechsolution.com</span>
                 </ContactInfo>
-                <HeaderNavitems>
-                    <span>Home</span>
-                    <span>About</span>
-                    <span>Services</span>
-                    <span>Contact</span>
-                </HeaderNavitems>
-            </HeaderDetails>
+                <HeaderDetails>
+                    <HeaderNavitems>
+                        <span>Home</span>
+                        <span>Services</span>
+                        <span>Portfolio</span>
+                        <span>About</span>
+                        <span>Contact Us</span>
+                    </HeaderNavitems>
+                </HeaderDetails>
+            </HeaderMainLine>
             <HamburgerContainer>
                 <HamburgerButton onClick={toggleMenu}>☰</HamburgerButton>
-                {isMenuOpen && (<DropdownMenuComponent />)}
+                {isMenuOpen && <DropdownMenuComponent />}
             </HamburgerContainer>
         </HeaderContainer>
     );
