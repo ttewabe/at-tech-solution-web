@@ -10,12 +10,14 @@ import {
     SocialMediaLogoItem,
     CloseButton,
 } from '../../header/Header.style';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTelegram, FaYoutube } from 'react-icons/fa';
+import { FaXmark } from 'react-icons/fa6';
 
-// lets take out the dropdown menu from the header and make it a separate component in this file
+// Let's take out the dropdown menu from the header and make it a separate component in this file
 const DropdownMenuComponent: React.FC = () => {
     return (
         <DropdownMenu>
-            <CloseButton>X</CloseButton>
+            <CloseButton>{<FaXmark />}</CloseButton>
             <DropdownLogoContainer>
                 <Logo>AT Tech</Logo>
             </DropdownLogoContainer>
@@ -23,21 +25,18 @@ const DropdownMenuComponent: React.FC = () => {
                 <DropdownList>
                     <DropdownListItem>Website Development</DropdownListItem>
                     <DropdownListItem>Social Services</DropdownListItem>
-                    <DropdownListItem>
-                        Business Card Development
-                    </DropdownListItem>
+                    <DropdownListItem>Business Card Development</DropdownListItem>
                     <DropdownListItem>Teaching Coding</DropdownListItem>
                     <DropdownListItem>Application Development</DropdownListItem>
                 </DropdownList>
             </DropdownContentContainer>
             <ContactList>
                 <SocialMediaLogos>
-                    <SocialMediaLogoItem>h</SocialMediaLogoItem>
-                    <SocialMediaLogoItem>y</SocialMediaLogoItem>
-                    <SocialMediaLogoItem>h</SocialMediaLogoItem>
-                    <SocialMediaLogoItem>y</SocialMediaLogoItem>
-                    <SocialMediaLogoItem>h</SocialMediaLogoItem>
-                    <SocialMediaLogoItem>y</SocialMediaLogoItem>
+                    <SocialMediaLogoItem>{<FaFacebook />}</SocialMediaLogoItem>
+                    <SocialMediaLogoItem>{<FaInstagram />}</SocialMediaLogoItem>
+                    <SocialMediaLogoItem>{<FaLinkedin />}</SocialMediaLogoItem>
+                    <SocialMediaLogoItem>{<FaTelegram />}</SocialMediaLogoItem>
+                    <SocialMediaLogoItem>{<FaYoutube />}</SocialMediaLogoItem>
                 </SocialMediaLogos>
             </ContactList>
         </DropdownMenu>
