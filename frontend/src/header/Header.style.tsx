@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
     align-items: center;
     background-color: #003366;
     color: white;
-    padding: 0 0.8rem 0.8rem 1.2rem;
+    padding: 0.4rem 0.8rem 1.2rem 1.2rem;
 `;
 
 export const HeaderMainLine = styled.div`
@@ -15,15 +15,16 @@ export const HeaderMainLine = styled.div`
     flex-direction: column;
     width: 100%;
     align-items: center;
-    padding: 0 20px 0 20px;
+    padding-right: 20px;
     font-family: Arial, sans-serif;
-    gap: 20px;
+    gap: 30px;
 `;
 
 export const Logo = styled.div`
     font-size: 24px;
     font-weight: bold;
     min-width: max-content;
+    padding-top: 10px;
 `;
 
 export const HeaderDetails = styled.div`
@@ -36,11 +37,13 @@ export const HeaderDetails = styled.div`
 
 export const HeaderNavitems = styled.div`
     display: flex;
-    gap: 40px;
+    gap: 80px;
     justify-content: space-between;
+    margin-right: 20%;
 
     span {
         cursor: pointer;
+        min-width: max-content;
     }
 `;
 
@@ -68,6 +71,7 @@ export const HamburgerButton = styled.button`
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
+    padding-top: 10px;
 `;
 
 export const DropdownLogoContainer = styled.div`
@@ -78,7 +82,8 @@ export const DropdownLogoContainer = styled.div`
 
 export const CloseButton = styled.div`
     color: #aa2222;
-    text-align: right;
+    text-align: center;
+    line-height: 30px;
     width: 25px;
     height: 25px;
     border-radius: 50%;
