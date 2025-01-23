@@ -16,6 +16,12 @@ export const Header: React.FC = () => {
 
     const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
+    const handleBlur = (event: React.FocusEvent<HTMLDivElement>) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+            setMenuOpen(false);
+        }
+    };
+
     return (
         <HeaderContainer>
             <Logo>AT Tech</Logo>
@@ -34,7 +40,7 @@ export const Header: React.FC = () => {
                     </HeaderNavitems>
                 </HeaderDetails>
             </HeaderMainLine>
-            <HamburgerContainer>
+            <HamburgerContainer onBlur={handleBlur} tabIndex={-1}>
                 <HamburgerButton onClick={toggleMenu}>☰</HamburgerButton>
                 {isMenuOpen && <DropdownMenuComponent />}
             </HamburgerContainer>
