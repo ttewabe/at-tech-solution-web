@@ -77,23 +77,47 @@ export const HamburgerButton = styled.button`
 export const DropdownLogoContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin: 2rem;
+    padding-right: 1rem;
+    margin: 0 2rem 0.2rem 0;
+`;
+
+export const OneLineContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 `;
 
 export const CloseButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #aa2222;
     text-align: center;
-    line-height: 30px;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     border: solid 1px #a2a2a2;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+`;
+
+export const DropdownMenuContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 0 1.8rem;
+
+    /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 `;
 
 export const DropdownContentContainer = styled.div`
-    display: flex;
-    justify-content: left;
-    padding-left: 1.5rem;
+
 `;
 
 export const DropdownList = styled.ul`
@@ -104,9 +128,10 @@ export const DropdownList = styled.ul`
 
 export const DropdownListItem = styled.li`
     padding: 10px 20px;
-    margin: 0.8rem;
+    margin: 0.8rem 0;
     cursor: pointer;
-    background-color: #d9d9d9;
+    background-color: #efefef;
+    
     back &:hover {
         background-color: #e8e5e5;
     }
@@ -114,34 +139,68 @@ export const DropdownListItem = styled.li`
 
 export const ContactList = styled.div`
     display: flex;
+    flex-direction: column;
     padding: 5px;
-    margin: 1rem 1rem;
+    margin: 1rem 0;
     border 1px solid #a2a2a2;
-    background-color: #d9d9d9;
+    background-color: #efefef;
+    border-radius: 4px;
+    padding-bottom: 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
 `;
 
 export const SocialMediaLogos = styled.div`
     display: flex;
     width: 100%;
+    box-sizing: border-box;
     flex-direction: row;
     gap: 0.3rem;
     padding: 0.5rem;
     justify-content: space-between;
+    margin-bottom: 1.5rem;
 `;
 
 export const SocialMediaLogoItem = styled.div`
-    width: 10px;
+    display: flex;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    border: 2px solid #cdcdcd;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+`;
+
+export const ContactListContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
 `;
 
 export const DropdownMenu = styled.div`
     position: fixed;
     top: 0;
     right: 0;
-    background: white;
     color: black;
+    background: white;
+    box-sizing: border-box;
     border: 1px solid #c9c9c9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     width: 350px;
-    height: 700px;
+    height: 100vh;
     z-index: 1000;
+    padding: 0.5rem 0;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    overflow-y: auto;
+
+    /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 `;
