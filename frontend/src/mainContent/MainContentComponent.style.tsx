@@ -42,6 +42,11 @@ export const AboutSection = styled.section`
     left: 15%;
 `;
 
+export const WallPaperButtons = styled.div`
+    display: flex;
+    gap: 1rem;
+`;
+
 export const CustomButton = styled.button`
     padding: 1rem 2rem;
     border-radius: 20px;
@@ -55,5 +60,27 @@ export const CustomButton = styled.button`
     &:hover {
         background-color: #000;
         color: #ffffff;
+    }
+`;
+
+export const ServicesGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+`;
+
+export const ServiceCard = styled.div`
+        background: var(--darker);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 1px solid #B8860B;
+    position: relative;
+    overflow: hidden;
+
+    h4 {
+        margin: 0;
     }
 `;
