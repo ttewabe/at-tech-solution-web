@@ -1,33 +1,38 @@
-import { useState } from 'react';
 import {
     MenuDetailsContainer, MenuDetailsItem, MenuDetailsTitle,
     MenuDetailsItemContent, MenuDetailsItemContentItem
 } from './MenuDetails.style';
 
-const MenuDetails: React.FC = () => {
+interface MenuDetailsProps {
+    setMenuDetailsOpen: (isOpen: boolean) => void;
+}
 
-    const [menuDetailsOpen, setMenuDetailsOpen] = useState<boolean>(false);
+const MenuDetails: React.FC<MenuDetailsProps> = ({setMenuDetailsOpen}) => {
 
     return (
-        <MenuDetailsContainer
-            onMouseEnter={() => setMenuDetailsOpen(true)}
-            onMouseLeave={() => setMenuDetailsOpen(false)}>
+        <MenuDetailsContainer onMouseEnter={() => setMenuDetailsOpen(true)}>
             <MenuDetailsItem>
                 <MenuDetailsTitle>Software Developement</MenuDetailsTitle>
                 <MenuDetailsItemContent>
-                    <MenuDetailsItemContentItem>sd</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>Web Developement</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>Mobile Developement</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>Web Developement</MenuDetailsItemContentItem>
                 </MenuDetailsItemContent>
             </MenuDetailsItem>
             <MenuDetailsItem>
                 <MenuDetailsTitle>Education Services</MenuDetailsTitle>
                 <MenuDetailsItemContent>
-                    <MenuDetailsItemContentItem>sd</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>Coding Tutorials</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>Coding Tutorials</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>Coding Tutorials</MenuDetailsItemContentItem>
                 </MenuDetailsItemContent>
             </MenuDetailsItem>
             <MenuDetailsItem>
                 <MenuDetailsTitle>Other Services</MenuDetailsTitle>
                 <MenuDetailsItemContent>
-                    <MenuDetailsItemContentItem>sd</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>USIS Form</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>US Citizenship Form</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>Notary Services</MenuDetailsItemContentItem>
                 </MenuDetailsItemContent>
             </MenuDetailsItem>
         </MenuDetailsContainer>
