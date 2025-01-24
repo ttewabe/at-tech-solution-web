@@ -11,6 +11,7 @@ import {
 } from './Header.style';
 import DropdownMenuComponent from '../components/dropdownMenuComponent/DropdownMenuComponent';
 import MenuDetails from '../components/menuDetails/MenuDetails';
+import {FaAngleDown} from 'react-icons/fa';
 
 export const Header: React.FC = () => {
     const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
@@ -25,7 +26,7 @@ export const Header: React.FC = () => {
     };
 
     return (
-        <HeaderContainer>
+        <HeaderContainer onMouseLeave={() => setMenuDetailsOpen(false)}>
             <Logo>AT Tech</Logo>
             <HeaderMainLine>
                 <ContactInfo>
@@ -36,9 +37,9 @@ export const Header: React.FC = () => {
                     <HeaderNavitems>
                         <span>Home</span>
                         <span
-                            onMouseEnter={() => setMenuDetailsOpen(true)}
-                            onMouseLeave={() => setMenuDetailsOpen(false)}>
+                            onMouseEnter={() => setMenuDetailsOpen(true)}>
                             Services
+                            <FaAngleDown/>
                         </span>
                         <span>Portfolio</span>
                         <span>About</span>
@@ -50,7 +51,7 @@ export const Header: React.FC = () => {
                 <HamburgerButton onClick={toggleMenu}>☰</HamburgerButton>
                 {isMenuOpen && <DropdownMenuComponent setMenuOpen={setMenuOpen} />}
             </HamburgerContainer>
-            {isMenuDetailsOpen && <MenuDetails />}
+            {isMenuDetailsOpen && <MenuDetails setMenuDetailsOpen={setMenuDetailsOpen}/>}
         </HeaderContainer>
     );
 };
