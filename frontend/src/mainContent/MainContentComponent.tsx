@@ -1,10 +1,15 @@
 import React from 'react'
 
-import { MainContent, WallPaper, CompanyMoto, AboutSection, CustomButton, WallPaperButtons, ServicesGrid, ServiceCard, ServiceCardIcon, } from './MainContentComponent.style';
+import {
+    MainContent, WallPaper, CompanyMoto, AboutSection,
+    CustomButton, WallPaperButtons, ServicesGrid, ServiceCard,
+    ServiceCardIcon, ProjectLink,
+} from './MainContentComponent.style';
 import WallPaperImage from '../assets/wallpaper.jpg';
 import EducationIcon from '../assets/education-icon.png';
 import AppDevelopmentIcon from '../assets/app-development-icon.png';
 import MobileDevelopmentIcon from '../assets/mobile-development-icon.jpg';
+import { FaAngleRight } from 'react-icons/fa';
 
 const MainContentComponent: React.FC = () => {
     return (
@@ -61,6 +66,7 @@ const MainContentComponent: React.FC = () => {
                         <p>
                             It provides real-time data and insights for better resource management.
                         </p>
+                        <ProjectLink>View Project <FaAngleRight /></ProjectLink>
                     </ServiceCard>
                     <ServiceCard className='featured-project-card'>
                         <ServiceCard>
@@ -74,6 +80,7 @@ const MainContentComponent: React.FC = () => {
                             It optimizes stock levels, reduces costs,
                             and improves overall efficiency.
                         </p>
+                        <ProjectLink>View Project <FaAngleRight /></ProjectLink>
                     </ServiceCard>
                     <ServiceCard className='featured-project-card'>
                         <ServiceCard>
@@ -87,6 +94,7 @@ const MainContentComponent: React.FC = () => {
                             It enhances efficiency, reduces
                             errors, and improves customer satisfaction.
                         </p>
+                        <ProjectLink>View Project <FaAngleRight /></ProjectLink>
                     </ServiceCard>
                     <ServiceCard className='featured-project-card'>
                         <ServiceCard>
@@ -100,6 +108,7 @@ const MainContentComponent: React.FC = () => {
                             It improves customer service, boosts sales,
                             and enhances customer retention.
                         </p>
+                        <ProjectLink>View Project <FaAngleRight /></ProjectLink>
                     </ServiceCard>
                 </ServicesGrid>
             </AboutSection>
