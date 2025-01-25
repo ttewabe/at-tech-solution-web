@@ -132,10 +132,18 @@ export const DropdownListItem = styled.li`
     margin: 0.8rem 0;
     cursor: pointer;
     background-color: #efefef;
-    
-    back &:hover {
+    border-radius: 5px;
+
+    &:hover {
         background-color: #e8e5e5;
+        box-shadow: 0.1rem 0.3rem 0.3rem rgba(0, 0, 0, .15);
     }
+`;
+
+export const DropdownListItemDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const ContactList = styled.div`
@@ -147,7 +155,7 @@ export const ContactList = styled.div`
     background-color: #efefef;
     border-radius: 4px;
     padding-bottom: 2rem;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
 `;
 
 export const SocialMediaLogos = styled.div`
