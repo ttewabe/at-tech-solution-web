@@ -91,6 +91,11 @@ export const ServiceCard = styled.div`
     h4 {
         margin: 0;
     }
+
+    p {
+        font-size: 14px;
+        width: 100%;
+    }
 `;
 
 export const ServiceCardIcon = styled.div`
