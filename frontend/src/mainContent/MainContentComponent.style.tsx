@@ -87,6 +87,7 @@ export const ServiceCard = styled.div`
     border: 1px solid #B8860B;
     position: relative;
     overflow: hidden;
+    padding-bottom: 4rem;
 
     h4 {
         margin: 0;
@@ -112,6 +113,8 @@ export const ServiceCardIcon = styled.div`
 `;
 
 export const ProjectLink = styled.div`
+    position: absolute;
+    bottom: 20px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
