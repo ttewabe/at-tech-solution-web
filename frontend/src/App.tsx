@@ -1,12 +1,13 @@
 import React from 'react';
-import { Header } from './header/Header';
-import MainContentComponent from './mainContent/MainContentComponent';
+import AuthenticatedApp from './AuthenticatedApp';
+import { Route, Routes } from 'react-router-dom';
 
 const App: React.FC = () => {
     return (
         <div className="App">
-            <Header />
-            <MainContentComponent />
+            <Routes>
+                <Route path="/*" element={<AuthenticatedApp />} />
+            </Routes>
         </div>
     );
 };
