@@ -12,8 +12,9 @@ import {
     ContactListContent,
     DropdownMenuContent,
     OneLineContainer,
+    DropdownListItemDiv,
 } from '../../header/Header.style';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTelegram, FaYoutube, FaPhone } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTelegram, FaYoutube, FaPhone, FaAngleRight, } from 'react-icons/fa';
 import { FaXmark, FaEnvelope } from 'react-icons/fa6';
 
 // Let's take out the dropdown menu from the header and make it a separate component in this file
@@ -29,11 +30,31 @@ const DropdownMenuComponent: React.FC<{ setMenuOpen: (isOpen: boolean) => void }
                 </DropdownLogoContainer>
                 <DropdownContentContainer>
                     <DropdownList>
-                        <DropdownListItem>Website Development</DropdownListItem>
-                        <DropdownListItem>Social Services</DropdownListItem>
-                        <DropdownListItem>Business Card Development</DropdownListItem>
-                        <DropdownListItem>Teaching Coding</DropdownListItem>
-                        <DropdownListItem>Application Development</DropdownListItem>
+                        <DropdownListItem>
+                            <DropdownListItemDiv>
+                            Website Development<FaAngleRight />
+                            </DropdownListItemDiv>
+                        </DropdownListItem>
+                        <DropdownListItem>
+                            <DropdownListItemDiv>
+                            Social Services<FaAngleRight />
+                            </DropdownListItemDiv>
+                        </DropdownListItem>
+                        <DropdownListItem>
+                            <DropdownListItemDiv>
+                            Business Card Development<FaAngleRight />
+                            </DropdownListItemDiv>
+                        </DropdownListItem>
+                        <DropdownListItem>
+                            <DropdownListItemDiv>
+                            Teaching Coding<FaAngleRight />
+                            </DropdownListItemDiv>
+                        </DropdownListItem>
+                        <DropdownListItem>
+                            <DropdownListItemDiv>
+                            Application Development<FaAngleRight />
+                            </DropdownListItemDiv>
+                        </DropdownListItem>
                     </DropdownList>
                 </DropdownContentContainer>
                 <ContactList>
