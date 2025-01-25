@@ -7,7 +7,7 @@ interface MenuDetailsProps {
     setMenuDetailsOpen: (isOpen: boolean) => void;
 }
 
-const MenuDetails: React.FC<MenuDetailsProps> = ({setMenuDetailsOpen}) => {
+const MenuDetails: React.FC<MenuDetailsProps> = ({ setMenuDetailsOpen }) => {
 
     return (
         <MenuDetailsContainer onMouseEnter={() => setMenuDetailsOpen(true)}>
@@ -16,15 +16,15 @@ const MenuDetails: React.FC<MenuDetailsProps> = ({setMenuDetailsOpen}) => {
                 <MenuDetailsItemContent>
                     <MenuDetailsItemContentItem>Web Developement</MenuDetailsItemContentItem>
                     <MenuDetailsItemContentItem>Mobile Developement</MenuDetailsItemContentItem>
-                    <MenuDetailsItemContentItem>Web Developement</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>Software Maintenance</MenuDetailsItemContentItem>
                 </MenuDetailsItemContent>
             </MenuDetailsItem>
             <MenuDetailsItem>
                 <MenuDetailsTitle>Education Services</MenuDetailsTitle>
                 <MenuDetailsItemContent>
                     <MenuDetailsItemContentItem>Coding Tutorials</MenuDetailsItemContentItem>
-                    <MenuDetailsItemContentItem>Coding Tutorials</MenuDetailsItemContentItem>
-                    <MenuDetailsItemContentItem>Coding Tutorials</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>Web Design and Development</MenuDetailsItemContentItem>
+                    <MenuDetailsItemContentItem>Fundamental Algorithms</MenuDetailsItemContentItem>
                 </MenuDetailsItemContent>
             </MenuDetailsItem>
             <MenuDetailsItem>
