@@ -105,3 +105,20 @@ export const ServiceCardIcon = styled.div`
         height: 100%;
     }
 `;
+
+export const ProjectLink = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: #eeeeee;
+
+    &:hover {
+        scale: 1.05;
+        transition: all 0.3s ease;
+        background-color: #dddddd;
+    }
+`;
