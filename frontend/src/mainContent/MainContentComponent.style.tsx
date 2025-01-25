@@ -6,13 +6,13 @@ export const MainContent = styled.div`
 `;
 
 interface WallPaperProps {
-    backgroundImage: string;
+    $backgroundimage: string;
 }
 
 export const WallPaper = styled.div<WallPaperProps>`
     height: 85dvh;
     background-color: #efefef;
-    background-image: url(${props => props.backgroundImage});
+    background-image: url(${props => props.$backgroundimage});
     background-size: cover;
     background-position: center;
 `;
@@ -38,8 +38,13 @@ export const CompanyMoto = styled.div`
 export const AboutSection = styled.section`
     width: 70%;
     text-align: center;
-    position: absolute;
+    position: relative;
     left: 15%;
+    margin-bottom: 4rem;
+
+    .featured-projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
 `;
 
 export const WallPaperButtons = styled.div`
@@ -65,13 +70,16 @@ export const CustomButton = styled.button`
 
 export const ServicesGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
 `;
 
 export const ServiceCard = styled.div`
-        background: var(--darker);
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    background: var(--darker);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -82,5 +90,18 @@ export const ServiceCard = styled.div`
 
     h4 {
         margin: 0;
+    }
+`;
+
+export const ServiceCardIcon = styled.div`
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    color: #444444;
+
+    img {
+        width: 100%;
+        height: 100%;
     }
 `;
