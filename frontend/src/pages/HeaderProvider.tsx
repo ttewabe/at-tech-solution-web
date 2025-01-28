@@ -12,6 +12,6 @@ const HeaderProvider: React.FC = () => {
             <Footer />
         </>
     );
-}
+};
 
 export default HeaderProvider;

@@ -35,4 +35,4 @@ export const MenuDetailsItemContent = styled.ul`
 export const MenuDetailsItemContentItem = styled.li`
     margin-bottom: 0.5rem;
     font-size: 14px;
-`
+`;

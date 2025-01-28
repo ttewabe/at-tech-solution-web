@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
     color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 `;
 
 export const FooterContent = styled.div`
@@ -52,12 +55,20 @@ export const FooterElements = styled.div`
         border: 0.2px solid #999;
         border-radius: 5px;
         margin-right: 10px;
-        }
-        
+    }
+
     button {
         padding: 10px;
         border: 0.2px solid #999;
+        background-color: #003366;
+        color: #fff;
         border-radius: 5px;
+        width: 120px;
+
+        &:hover {
+            background-color: #114477;
+            scale: 1.05;
+        }
     }
 `;
 

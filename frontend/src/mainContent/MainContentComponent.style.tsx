@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const MainContent = styled.div`
     width: 100%;
     padding-bottom: 4rem;
+    min-height: 80dvh;
 `;
 
 interface WallPaperProps {
@@ -12,7 +13,7 @@ interface WallPaperProps {
 export const WallPaper = styled.div<WallPaperProps>`
     height: 85dvh;
     background-color: #efefef;
-    background-image: url(${props => props.$backgroundimage});
+    background-image: url(${(props) => props.$backgroundimage});
     background-size: cover;
     background-position: center;
 `;
@@ -78,13 +79,13 @@ export const ServicesGrid = styled.div`
 export const ServiceCard = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
     background: var(--darker);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
-    border: 1px solid #B8860B;
+    border: 1px solid #b8860b;
     position: relative;
     overflow: hidden;
     padding-bottom: 4rem;

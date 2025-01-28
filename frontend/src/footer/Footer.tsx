@@ -1,5 +1,11 @@
 import React from 'react';
-import { FooterContainer, FooterContent, FooterMain, FooterBottom, FooterElements } from './Footer.style';
+import {
+    FooterContainer,
+    FooterContent,
+    FooterMain,
+    FooterBottom,
+    FooterElements,
+} from './Footer.style';
 
 const Footer: React.FC = () => {
     return (
@@ -26,7 +32,7 @@ const Footer: React.FC = () => {
                     <FooterElements>
                         <h3>Newsletter</h3>
                         <div>
-                            <input type='text' placeholder='Enter your Email' />
+                            <input type="text" placeholder="Enter your Email" />
                             <button>Subscribe</button>
                         </div>
                     </FooterElements>

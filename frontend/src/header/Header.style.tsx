@@ -44,6 +44,11 @@ export const HeaderNavitems = styled.div`
     span {
         cursor: pointer;
         min-width: max-content;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
 `;
 
@@ -97,7 +102,7 @@ export const CloseButton = styled.div`
     height: 35px;
     border-radius: 50%;
     border: solid 1px #a2a2a2;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     cursor: pointer;
 `;
 
@@ -113,13 +118,11 @@ export const DropdownMenuContent = styled.div`
     }
 
     /* Hide scrollbar for IE, Edge, and Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 `;
 
-export const DropdownContentContainer = styled.div`
-
-`;
+export const DropdownContentContainer = styled.div``;
 
 export const DropdownList = styled.ul`
     list-style: none;
@@ -136,7 +139,7 @@ export const DropdownListItem = styled.li`
 
     &:hover {
         background-color: #e8e5e5;
-        box-shadow: 0.1rem 0.3rem 0.3rem rgba(0, 0, 0, .15);
+        box-shadow: 0.1rem 0.3rem 0.3rem rgba(0, 0, 0, 0.15);
     }
 `;
 
@@ -177,7 +180,7 @@ export const SocialMediaLogoItem = styled.div`
     border: 2px solid #cdcdcd;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 `;
 
 export const ContactListContent = styled.div`
@@ -201,7 +204,7 @@ export const DropdownMenu = styled.div`
     height: 100vh;
     z-index: 1000;
     padding: 0.5rem 0;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     overflow-y: auto;
 
     /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
@@ -210,6 +213,6 @@ export const DropdownMenu = styled.div`
     }
 
     /* Hide scrollbar for IE, Edge, and Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 `;

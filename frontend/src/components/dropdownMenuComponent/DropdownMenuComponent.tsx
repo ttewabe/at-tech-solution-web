@@ -14,16 +14,28 @@ import {
     OneLineContainer,
     DropdownListItemDiv,
 } from '../../header/Header.style';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTelegram, FaYoutube, FaPhone, FaAngleRight, } from 'react-icons/fa';
+import {
+    FaFacebook,
+    FaInstagram,
+    FaLinkedin,
+    FaTelegram,
+    FaYoutube,
+    FaPhone,
+    FaAngleRight,
+} from 'react-icons/fa';
 import { FaXmark, FaEnvelope } from 'react-icons/fa6';
 
 // Let's take out the dropdown menu from the header and make it a separate component in this file
-const DropdownMenuComponent: React.FC<{ setMenuOpen: (isOpen: boolean) => void }> = ({ setMenuOpen }) => {
+const DropdownMenuComponent: React.FC<{
+    setMenuOpen: (isOpen: boolean) => void;
+}> = ({ setMenuOpen }) => {
     return (
         <DropdownMenu>
             <DropdownMenuContent>
                 <OneLineContainer>
-                    <CloseButton onClick={() => setMenuOpen(false)}>{<FaXmark size={25} />}</CloseButton>
+                    <CloseButton onClick={() => setMenuOpen(false)}>
+                        {<FaXmark size={25} />}
+                    </CloseButton>
                 </OneLineContainer>
                 <DropdownLogoContainer>
                     <Logo>AT Tech</Logo>
@@ -32,38 +44,53 @@ const DropdownMenuComponent: React.FC<{ setMenuOpen: (isOpen: boolean) => void }
                     <DropdownList>
                         <DropdownListItem>
                             <DropdownListItemDiv>
-                            Website Development<FaAngleRight />
+                                Website Development
+                                <FaAngleRight />
                             </DropdownListItemDiv>
                         </DropdownListItem>
                         <DropdownListItem>
                             <DropdownListItemDiv>
-                            Social Services<FaAngleRight />
+                                Social Services
+                                <FaAngleRight />
                             </DropdownListItemDiv>
                         </DropdownListItem>
                         <DropdownListItem>
                             <DropdownListItemDiv>
-                            Business Card Development<FaAngleRight />
+                                Business Card Development
+                                <FaAngleRight />
                             </DropdownListItemDiv>
                         </DropdownListItem>
                         <DropdownListItem>
                             <DropdownListItemDiv>
-                            Teaching Coding<FaAngleRight />
+                                Teaching Coding
+                                <FaAngleRight />
                             </DropdownListItemDiv>
                         </DropdownListItem>
                         <DropdownListItem>
                             <DropdownListItemDiv>
-                            Application Development<FaAngleRight />
+                                Application Development
+                                <FaAngleRight />
                             </DropdownListItemDiv>
                         </DropdownListItem>
                     </DropdownList>
                 </DropdownContentContainer>
                 <ContactList>
                     <SocialMediaLogos>
-                        <SocialMediaLogoItem>{<FaFacebook size={20} />}</SocialMediaLogoItem>
-                        <SocialMediaLogoItem>{<FaInstagram size={20} />}</SocialMediaLogoItem>
-                        <SocialMediaLogoItem>{<FaLinkedin size={20} />}</SocialMediaLogoItem>
-                        <SocialMediaLogoItem>{<FaTelegram size={20} />}</SocialMediaLogoItem>
-                        <SocialMediaLogoItem>{<FaYoutube size={20} />}</SocialMediaLogoItem>
+                        <SocialMediaLogoItem>
+                            {<FaFacebook size={20} />}
+                        </SocialMediaLogoItem>
+                        <SocialMediaLogoItem>
+                            {<FaInstagram size={20} />}
+                        </SocialMediaLogoItem>
+                        <SocialMediaLogoItem>
+                            {<FaLinkedin size={20} />}
+                        </SocialMediaLogoItem>
+                        <SocialMediaLogoItem>
+                            {<FaTelegram size={20} />}
+                        </SocialMediaLogoItem>
+                        <SocialMediaLogoItem>
+                            {<FaYoutube size={20} />}
+                        </SocialMediaLogoItem>
                     </SocialMediaLogos>
                     <ContactListContent>
                         <FaPhone size={40} />

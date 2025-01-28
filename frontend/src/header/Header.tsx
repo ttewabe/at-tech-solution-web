@@ -11,7 +11,8 @@ import {
 } from './Header.style';
 import DropdownMenuComponent from '../components/dropdownMenuComponent/DropdownMenuComponent';
 import MenuDetails from '../components/menuDetails/MenuDetails';
-import {FaAngleDown} from 'react-icons/fa';
+import { FaAngleDown } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export const Header: React.FC = () => {
     const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
@@ -35,23 +36,34 @@ export const Header: React.FC = () => {
                 </ContactInfo>
                 <HeaderDetails>
                     <HeaderNavitems>
-                        <span>Home</span>
-                        <span
-                            onMouseEnter={() => setMenuDetailsOpen(true)}>
-                            Services
-                            <FaAngleDown/>
+                        <span>
+                            <Link to="/home">Home</Link>
                         </span>
-                        <span>Portfolio</span>
-                        <span>About</span>
-                        <span>Contact Us</span>
+                        <span onMouseEnter={() => setMenuDetailsOpen(true)}>
+                            <Link to="/services">Services</Link>
+                            <FaAngleDown />
+                        </span>
+                        <span>
+                            <Link to="/portfolio">Portfolio</Link>
+                        </span>
+                        <span>
+                            <Link to="/about">About</Link>
+                        </span>
+                        <span>
+                            <Link to="/contact">Contact Us</Link>
+                        </span>
                     </HeaderNavitems>
                 </HeaderDetails>
             </HeaderMainLine>
             <HamburgerContainer onBlur={handleBlur} tabIndex={-1}>
                 <HamburgerButton onClick={toggleMenu}>☰</HamburgerButton>
-                {isMenuOpen && <DropdownMenuComponent setMenuOpen={setMenuOpen} />}
+                {isMenuOpen && (
+                    <DropdownMenuComponent setMenuOpen={setMenuOpen} />
+                )}
             </HamburgerContainer>
-            {isMenuDetailsOpen && <MenuDetails setMenuDetailsOpen={setMenuDetailsOpen}/>}
+            {isMenuDetailsOpen && (
+                <MenuDetails setMenuDetailsOpen={setMenuDetailsOpen} />
+            )}
         </HeaderContainer>
     );
 };
