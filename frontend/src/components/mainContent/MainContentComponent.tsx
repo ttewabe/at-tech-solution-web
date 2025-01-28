@@ -12,10 +12,10 @@ import {
     ServiceCardIcon,
     ProjectLink,
 } from './MainContentComponent.style';
-import WallPaperImage from '../assets/wallpaper.jpg';
-import EducationIcon from '../assets/education-icon.png';
-import AppDevelopmentIcon from '../assets/app-development-icon.png';
-import MobileDevelopmentIcon from '../assets/mobile-development-icon.jpg';
+import WallPaperImage from '../../assets/wallpaper.jpg';
+import EducationIcon from '../../assets/education-icon.png';
+import AppDevelopmentIcon from '../../assets/app-development-icon.png';
+import MobileDevelopmentIcon from '../../assets/mobile-development-icon.jpg';
 import { FaAngleRight } from 'react-icons/fa';
 
 const MainContentComponent: React.FC = () => {

@@ -9,8 +9,8 @@ import {
     HeaderNavitems,
     HeaderMainLine,
 } from './Header.style';
-import DropdownMenuComponent from '../components/dropdownMenuComponent/DropdownMenuComponent';
-import MenuDetails from '../components/menuDetails/MenuDetails';
+import DropdownMenuComponent from '../dropdownMenuComponent/DropdownMenuComponent';
+import MenuDetails from '../menuDetails/MenuDetails';
 import { FaAngleDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 

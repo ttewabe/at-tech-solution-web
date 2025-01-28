@@ -13,7 +13,7 @@ import {
     DropdownMenuContent,
     OneLineContainer,
     DropdownListItemDiv,
-} from '../../header/Header.style';
+} from '../header/Header.style';
 import {
     FaFacebook,
     FaInstagram,

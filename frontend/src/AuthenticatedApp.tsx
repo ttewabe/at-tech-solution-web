@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import HeaderProvider from './pages/HeaderProvider';
-import MainContentComponent from './mainContent/MainContentComponent';
-import Services from './services/Services';
-import Portfolio from './portfolio/Portfolio';
+import HeaderProvider from './components/headerFooterProvider/HeaderFooterProvider';
+import MainContentComponent from './components/mainContent/MainContentComponent';
+import Services from './components/services/Services';
+import Portfolio from './components/portfolio/Portfolio';
 
 const AuthenticatedApp: React.FC = () => {
     return (
