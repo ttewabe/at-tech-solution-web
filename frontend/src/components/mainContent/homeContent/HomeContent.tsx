@@ -11,14 +11,14 @@ import {
     ServiceCard,
     ServiceCardIcon,
     ProjectLink,
-} from './MainContentComponent.style';
-import WallPaperImage from '../../assets/wallpaper.jpg';
-import EducationIcon from '../../assets/education-icon.png';
-import AppDevelopmentIcon from '../../assets/app-development-icon.png';
-import MobileDevelopmentIcon from '../../assets/mobile-development-icon.jpg';
+} from './HomeContent.style';
+import WallPaperImage from '../../../assets/wallpaper.jpg';
+import EducationIcon from '../../../assets/education-icon.png';
+import AppDevelopmentIcon from '../../../assets/app-development-icon.png';
+import MobileDevelopmentIcon from '../../../assets/mobile-development-icon.jpg';
 import { FaAngleRight } from 'react-icons/fa';
 
-const MainContentComponent: React.FC = () => {
+const HomeContent: React.FC = () => {
     return (
         <MainContent>
             <WallPaper $backgroundimage={WallPaperImage}>
@@ -146,4 +146,4 @@ const MainContentComponent: React.FC = () => {
     );
 };
 
-export default MainContentComponent;
+export default HomeContent;

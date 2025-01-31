@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HeaderProvider from './components/headerFooterProvider/HeaderFooterProvider';
-import MainContentComponent from './components/mainContent/MainContentComponent';
+import HomeContent from './components/mainContent/homeContent/HomeContent';
 import Services from './components/services/Services';
 import Portfolio from './components/portfolio/Portfolio';
 
@@ -9,7 +9,7 @@ const AuthenticatedApp: React.FC = () => {
     return (
         <Routes>
             <Route path="" element={<HeaderProvider />}>
-                <Route path="home" element={<MainContentComponent />} />
+                <Route path="home" element={<HomeContent />} />
                 <Route path="services" element={<Services />} />
                 <Route path="portfolio" element={<Portfolio />} />
                 <Route path="contact" element={<Services />} />
