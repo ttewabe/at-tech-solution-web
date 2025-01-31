@@ -17,6 +17,7 @@ import EducationIcon from '../../../assets/education-icon.png';
 import AppDevelopmentIcon from '../../../assets/app-development-icon.png';
 import MobileDevelopmentIcon from '../../../assets/mobile-development-icon.jpg';
 import { FaAngleRight } from 'react-icons/fa';
+import ChartComponent from '../../charts/ChartComponent';
 
 const services = [
     {
@@ -67,6 +68,38 @@ const featuredProjects = [
     },
 ];
 
+const skills = [
+    {
+        title: 'Programming Languages',
+        description: 'Expertise in multiple programming languages including JavaScript, TypeScript, Python',
+    },
+    {
+        title: 'UI/UX Design',
+        description: 'Creating intuitive and responsive user interfaces',
+    },
+    {
+        title: 'Application Development',
+        description: 'Full-stack development for web and mobile applications',
+    },
+    {
+        title: 'Social Service Expertise',
+        description: 'Community engagement and social impact solutions',
+    },
+];
+
+const skillsData = {
+    labels: skills.map((skill) => skill.title),
+    datasets: [
+        {
+            label: 'Skill Level',
+            data: [90, 80, 85, 70], // Example skill levels
+            backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 205, 86, 0.2)', 'rgba(54, 162, 235, 0.2)'],
+            borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 159, 64, 1)', 'rgba(255, 205, 86, 1)', 'rgba(54, 162, 235, 1)'],
+            borderWidth: 1,
+        },
+    ],
+};
+
 const HomeContent: React.FC = () => {
     return (
         <MainContent>
@@ -92,6 +125,9 @@ const HomeContent: React.FC = () => {
                     Dream Soft has rapidly evolved into a comprehensive
                     technology solutions provider. Our expertise spans across
                     web development, application creation, and social services.
+                    Our team combines extensive
+                    expertise in coding, teaching, and social services to deliver comprehensive
+                    solutions that make a real difference.
                 </p>
                 <CustomButton>Meet the Team</CustomButton>
                 <ServicesGrid>
@@ -124,6 +160,23 @@ const HomeContent: React.FC = () => {
                         </ServiceCard>
                     ))}
                 </ServicesGrid>
+            </AboutSection>
+            <AboutSection key="skill-knowledge">
+                <h1>Our Skills and Knowledge</h1>
+                <p>
+                    Our team combines extensive expertise in coding, teaching, and social
+                    services to deliver comprehensive
+                    solutions that make a real difference.
+                </p>
+                <ServicesGrid>
+                    {skills.map((skill, index) => (
+                        <ServiceCard key={index}>
+                            <h4>{skill.title}</h4>
+                            <p>{skill.description}</p>
+                        </ServiceCard>
+                    ))}
+                </ServicesGrid>
+                <ChartComponent data={skillsData} />
             </AboutSection>
         </MainContent>
     );
