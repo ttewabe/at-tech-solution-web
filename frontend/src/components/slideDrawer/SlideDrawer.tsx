@@ -26,7 +26,7 @@ import {
 import { FaXmark, FaEnvelope } from 'react-icons/fa6';
 
 // Let's take out the dropdown menu from the header and make it a separate component in this file
-const DropdownMenuComponent: React.FC<{
+const SlideDrawer: React.FC<{
     setMenuOpen: (isOpen: boolean) => void;
 }> = ({ setMenuOpen }) => {
     return (
@@ -104,4 +104,4 @@ const DropdownMenuComponent: React.FC<{
     );
 };
 
-export default DropdownMenuComponent;
+export default SlideDrawer;
