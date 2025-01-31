@@ -112,7 +112,7 @@ const HomeContent: React.FC = () => {
                 <ServicesGrid className="featured-projects">
                     {featuredProjects.map((project, index) => (
                         <ServiceCard key={index} className="featured-project-card">
-                            <ServiceCard>
+                            <ServiceCard className="title-card">
                                 <h4>{project.title}</h4>
                             </ServiceCard>
                             {project.description.map((desc, i) => (

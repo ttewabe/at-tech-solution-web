@@ -90,6 +90,10 @@ export const ServiceCard = styled.div`
     overflow: hidden;
     padding-bottom: 4rem;
 
+    .title-card {
+        height: 1rem;
+    }
+
     h4 {
         margin: 0;
     }
