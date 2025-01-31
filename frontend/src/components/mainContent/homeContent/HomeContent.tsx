@@ -71,7 +71,8 @@ const featuredProjects = [
 const skills = [
     {
         title: 'Programming Languages',
-        description: 'Expertise in multiple programming languages including JavaScript, TypeScript, Python',
+        description:
+            'Expertise in multiple programming languages including JavaScript, TypeScript, Python',
     },
     {
         title: 'UI/UX Design',
@@ -93,8 +94,18 @@ const skillsData = {
         {
             label: 'Skill Level',
             data: [90, 80, 85, 70], // Example skill levels
-            backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 205, 86, 0.2)', 'rgba(54, 162, 235, 0.2)'],
-            borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 159, 64, 1)', 'rgba(255, 205, 86, 1)', 'rgba(54, 162, 235, 1)'],
+            backgroundColor: [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 205, 86, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 205, 86, 1)',
+                'rgba(54, 162, 235, 1)',
+            ],
             borderWidth: 1,
         },
     ],
@@ -125,9 +136,9 @@ const HomeContent: React.FC = () => {
                     Dream Soft has rapidly evolved into a comprehensive
                     technology solutions provider. Our expertise spans across
                     web development, application creation, and social services.
-                    Our team combines extensive
-                    expertise in coding, teaching, and social services to deliver comprehensive
-                    solutions that make a real difference.
+                    Our team combines extensive expertise in coding, teaching,
+                    and social services to deliver comprehensive solutions that
+                    make a real difference.
                 </p>
                 <CustomButton>Meet the Team</CustomButton>
                 <ServicesGrid>
@@ -147,7 +158,10 @@ const HomeContent: React.FC = () => {
                 <p>Explore some of our recent work and success stories</p>
                 <ServicesGrid className="featured-projects">
                     {featuredProjects.map((project, index) => (
-                        <ServiceCard key={index} className="featured-project-card">
+                        <ServiceCard
+                            key={index}
+                            className="featured-project-card"
+                        >
                             <ServiceCard className="title-card">
                                 <h4>{project.title}</h4>
                             </ServiceCard>
@@ -164,9 +178,9 @@ const HomeContent: React.FC = () => {
             <AboutSection key="skill-knowledge">
                 <h1>Our Skills and Knowledge</h1>
                 <p>
-                    Our team combines extensive expertise in coding, teaching, and social
-                    services to deliver comprehensive
-                    solutions that make a real difference.
+                    Our team combines extensive expertise in coding, teaching,
+                    and social services to deliver comprehensive solutions that
+                    make a real difference.
                 </p>
                 <ServicesGrid>
                     {skills.map((skill, index) => (

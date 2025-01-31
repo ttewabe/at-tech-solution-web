@@ -57,9 +57,7 @@ export const Header: React.FC = () => {
             </HeaderMainLine>
             <HamburgerContainer onBlur={handleBlur} tabIndex={-1}>
                 <HamburgerButton onClick={toggleMenu}>☰</HamburgerButton>
-                {isMenuOpen && (
-                    <SlideDrawer setMenuOpen={setMenuOpen} />
-                )}
+                {isMenuOpen && <SlideDrawer setMenuOpen={setMenuOpen} />}
             </HamburgerContainer>
             {isMenuDetailsOpen && (
                 <MenuDetails setMenuDetailsOpen={setMenuDetailsOpen} />
