@@ -9,7 +9,7 @@ import {
     HeaderNavitems,
     HeaderMainLine,
 } from './Header.style';
-import DropdownMenuComponent from '../dropdownMenuComponent/DropdownMenuComponent';
+import SlideDrawer from '../slideDrawer/SlideDrawer';
 import MenuDetails from '../menuDetails/MenuDetails';
 import { FaAngleDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -57,9 +57,7 @@ export const Header: React.FC = () => {
             </HeaderMainLine>
             <HamburgerContainer onBlur={handleBlur} tabIndex={-1}>
                 <HamburgerButton onClick={toggleMenu}>☰</HamburgerButton>
-                {isMenuOpen && (
-                    <DropdownMenuComponent setMenuOpen={setMenuOpen} />
-                )}
+                {isMenuOpen && <SlideDrawer setMenuOpen={setMenuOpen} />}
             </HamburgerContainer>
             {isMenuDetailsOpen && (
                 <MenuDetails setMenuDetailsOpen={setMenuDetailsOpen} />
