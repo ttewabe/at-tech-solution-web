@@ -74,11 +74,16 @@ export const ServicesGrid = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 `;
 
 export const ServiceCard = styled.div`
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     align-items: center;
     background: var(--darker);
     padding: 2rem;
