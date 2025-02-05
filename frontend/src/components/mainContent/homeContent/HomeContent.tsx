@@ -16,6 +16,8 @@ import WallPaperImage from '../../../assets/wallpaper.jpg';
 import EducationIcon from '../../../assets/education-icon.png';
 import AppDevelopmentIcon from '../../../assets/app-development-icon.png';
 import MobileDevelopmentIcon from '../../../assets/mobile-development-icon.jpg';
+import clientImage1 from '../../../assets/client-graph.jpg';
+import clientImage2 from '../../../assets/client-buildings.jpg';
 import { FaAngleRight } from 'react-icons/fa';
 import ChartComponent from '../../charts/ChartComponent';
 import { Carousel } from '../../../carousel/Carousel';
@@ -113,6 +115,25 @@ const skillsData = {
     ],
 };
 
+const testimonials = [
+    {
+        title: 'Happy HR Management',
+        description: [
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus et felis.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus et felis.',
+        ],
+        image: clientImage1,
+    },
+    {
+        title: 'Global Tours',
+        description: [
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus et felis.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus et felis.',
+        ],
+        image: clientImage2,
+    },
+];
+
 const HomeContent: React.FC = () => {
     return (
         <MainContent>
@@ -201,6 +222,16 @@ const HomeContent: React.FC = () => {
                 </ServicesGrid>
                 <Carousel items={skills} />
                 <ChartComponent data={skillsData} />
+            </AboutSection>
+            <AboutSection key="testimonials">
+                <h1>Testimonials</h1>
+                <p>See what our clients have to say about us</p>
+                <Carousel
+                    items={testimonials}
+                    className="always-visible"
+                    showButton={false}
+                    useTitleCard={false}
+                />
             </AboutSection>
         </MainContent>
     );
