@@ -8,14 +8,27 @@ import { FaAngleRight } from 'react-icons/fa';
 interface CarouselData {
     title: string;
     description: string[];
+    image?: string;
 }
 
-export const Carousel: React.FC<{ items: CarouselData[] }> = ({ items }) => {
+interface CarouselProps {
+    items: CarouselData[];
+    className?: string;
+    showButton?: boolean;
+    useTitleCard?: boolean;
+}
+
+export const Carousel: React.FC<CarouselProps> = ({
+    items,
+    className,
+    showButton = true,
+    useTitleCard = true,
+}) => {
     const settings: any = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
@@ -40,18 +53,25 @@ export const Carousel: React.FC<{ items: CarouselData[] }> = ({ items }) => {
     };
 
     return (
-        <CarouselStyled {...settings}>
+        <CarouselStyled {...settings} className={className}>
             {items.map((item, index) => (
                 <ServiceCard key={index}>
-                    <ServiceCard className="title-card">
+                    {useTitleCard ? (
+                        <ServiceCard className="title-card">
+                            <h4>{item.title}</h4>
+                        </ServiceCard>
+                    ) : (
                         <h4>{item.title}</h4>
-                    </ServiceCard>
+                    )}
                     {item.description.map((desc, i) => (
                         <p key={i}>{desc}</p>
                     ))}
-                    <ProjectLink>
-                        View Project <FaAngleRight />
-                    </ProjectLink>
+                    {showButton && (
+                        <ProjectLink>
+                            View Project <FaAngleRight />
+                        </ProjectLink>
+                    )}
+                    {item.image && <img src={item.image} alt="carousel" />}
                 </ServiceCard>
             ))}
         </CarouselStyled>
