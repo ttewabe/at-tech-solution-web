@@ -124,6 +124,14 @@ export const FooterElements = styled.div`
             align-items: center;
         }
     }
+
+    @media (max-width: 400px) {
+        .subscribe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 `;
 
 export const FooterBottom = styled.div`
