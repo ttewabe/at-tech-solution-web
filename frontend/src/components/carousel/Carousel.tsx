@@ -1,7 +1,7 @@
 import {
     ProjectLink,
     ServiceCard,
-} from '../components/mainContent/homeContent/HomeContent.style';
+} from '../mainContent/homeContent/HomeContent.style';
 import { CarouselStyled } from './Carousel.style';
 import { FaAngleRight } from 'react-icons/fa';
 

@@ -20,7 +20,7 @@ import clientImage1 from '../../../assets/client-graph.jpg';
 import clientImage2 from '../../../assets/client-buildings.jpg';
 import { FaAngleRight } from 'react-icons/fa';
 import ChartComponent from '../../charts/ChartComponent';
-import { Carousel } from '../../../carousel/Carousel';
+import { Carousel } from '../../carousel/Carousel';
 
 const services = [
     {
