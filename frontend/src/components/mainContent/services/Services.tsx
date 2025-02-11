@@ -1,8 +1,8 @@
 import React from 'react';
-import { MainContent } from '../homeContent/HomeContent.style';
+import { MainWrapper } from '../../commonStyledComponents/CommonStyledComponents.style';
 
 const Services: React.FC = () => {
-    return <MainContent>Services</MainContent>;
+    return <MainWrapper>Services</MainWrapper>;
 };
 
 export default Services;

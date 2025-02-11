@@ -1,8 +1,8 @@
 import React from 'react';
-import { MainContent } from '../homeContent/HomeContent.style';
+import { MainWrapper } from '../../commonStyledComponents/CommonStyledComponents.style';
 
 const Portfolio: React.FC = () => {
-    return <MainContent>Portfolio</MainContent>;
+    return <MainWrapper>Portfolio</MainWrapper>;
 };
 
 export default Portfolio;
