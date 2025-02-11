@@ -2,7 +2,7 @@ import {
     ProjectLink,
     ServiceCard,
 } from '../mainContent/homeContent/HomeContent.style';
-import { CarouselStyled } from './Carousel.style';
+import { CarouselStyled, CarouselWrapper } from './Carousel.style';
 import { FaAngleRight } from 'react-icons/fa';
 
 interface CarouselData {
@@ -53,27 +53,29 @@ export const Carousel: React.FC<CarouselProps> = ({
     };
 
     return (
-        <CarouselStyled {...settings} className={className}>
-            {items.map((item, index) => (
-                <ServiceCard key={index}>
-                    {useTitleCard ? (
-                        <ServiceCard className="title-card">
+        <CarouselWrapper>
+            <CarouselStyled {...settings} className={className}>
+                {items.map((item, index) => (
+                    <ServiceCard key={index}>
+                        {useTitleCard ? (
+                            <ServiceCard className="title-card">
+                                <h4>{item.title}</h4>
+                            </ServiceCard>
+                        ) : (
                             <h4>{item.title}</h4>
-                        </ServiceCard>
-                    ) : (
-                        <h4>{item.title}</h4>
-                    )}
-                    {item.description.map((desc, i) => (
-                        <p key={i}>{desc}</p>
-                    ))}
-                    {showButton && (
-                        <ProjectLink>
-                            View Project <FaAngleRight />
-                        </ProjectLink>
-                    )}
-                    {item.image && <img src={item.image} alt="carousel" />}
-                </ServiceCard>
-            ))}
-        </CarouselStyled>
+                        )}
+                        {item.description.map((desc, i) => (
+                            <p key={i}>{desc}</p>
+                        ))}
+                        {showButton && (
+                            <ProjectLink>
+                                View Project <FaAngleRight />
+                            </ProjectLink>
+                        )}
+                        {item.image && <img src={item.image} alt="carousel" />}
+                    </ServiceCard>
+                ))}
+            </CarouselStyled>
+        </CarouselWrapper>
     );
 };
