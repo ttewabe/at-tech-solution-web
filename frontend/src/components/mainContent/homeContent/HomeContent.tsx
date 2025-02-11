@@ -1,10 +1,8 @@
 import React from 'react';
 
 import {
-    MainContent,
     WallPaper,
     CompanyMoto,
-    AboutSection,
     CustomButton,
     WallPaperButtons,
     ServicesGrid,
@@ -12,6 +10,12 @@ import {
     ServiceCardIcon,
     ProjectLink,
 } from './HomeContent.style';
+import {
+    MainWrapper,
+    Section,
+    SectionTitle,
+} from '../../commonStyledComponents/CommonStyledComponents.style';
+
 import WallPaperImage from '../../../assets/wallpaper.jpg';
 import EducationIcon from '../../../assets/education-icon.png';
 import AppDevelopmentIcon from '../../../assets/app-development-icon.png';
@@ -21,6 +25,7 @@ import clientImage2 from '../../../assets/client-buildings.jpg';
 import { FaAngleRight } from 'react-icons/fa';
 import ChartComponent from '../../charts/ChartComponent';
 import { Carousel } from '../../carousel/Carousel';
+import { Testimonials } from '../../testimonials/Testimonials';
 
 const services = [
     {
@@ -136,7 +141,7 @@ const testimonials = [
 
 const HomeContent: React.FC = () => {
     return (
-        <MainContent>
+        <MainWrapper>
             <WallPaper $backgroundimage={WallPaperImage}>
                 <CompanyMoto>
                     <h1>Empowering Ideas With Code</h1>
@@ -152,8 +157,8 @@ const HomeContent: React.FC = () => {
                     </WallPaperButtons>
                 </CompanyMoto>
             </WallPaper>
-            <AboutSection key={'about-us'}>
-                <h1>About AT Tech Solutions</h1>
+            <Section key={'about-us'}>
+                <SectionTitle>About AT Tech Solutions</SectionTitle>
                 <p>
                     Founded by passionate software engineers in March 2023,
                     Dream Soft has rapidly evolved into a comprehensive
@@ -179,9 +184,9 @@ const HomeContent: React.FC = () => {
                     ))}
                 </ServicesGrid>
                 <Carousel items={skills} />
-            </AboutSection>
-            <AboutSection key={'featured-projects'}>
-                <h1>Featured Projects</h1>
+            </Section>
+            <Section key={'featured-projects'}>
+                <SectionTitle>Featured Projects</SectionTitle>
                 <p>Explore some of our recent work and success stories</p>
                 <ServicesGrid className="featured-projects">
                     {featuredProjects.map((project, index) => (
@@ -202,9 +207,9 @@ const HomeContent: React.FC = () => {
                     ))}
                 </ServicesGrid>
                 <Carousel items={featuredProjects} />
-            </AboutSection>
-            <AboutSection key="skill-knowledge">
-                <h1>Our Skills and Knowledge</h1>
+            </Section>
+            <Section key="skill-knowledge">
+                <SectionTitle>Our Skills and Knowledge</SectionTitle>
                 <p>
                     Our team combines extensive expertise in coding, teaching,
                     and social services to deliver comprehensive solutions that
@@ -222,18 +227,9 @@ const HomeContent: React.FC = () => {
                 </ServicesGrid>
                 <Carousel items={skills} />
                 <ChartComponent data={skillsData} />
-            </AboutSection>
-            <AboutSection key="testimonials">
-                <h1>Testimonials</h1>
-                <p>See what our clients have to say about us</p>
-                <Carousel
-                    items={testimonials}
-                    className="always-visible"
-                    showButton={false}
-                    useTitleCard={false}
-                />
-            </AboutSection>
-        </MainContent>
+            </Section>
+            <Testimonials testimonials={testimonials} />
+        </MainWrapper>
     );
 };
 
