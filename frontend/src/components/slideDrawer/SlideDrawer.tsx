@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
     ContactList,
     DropdownContentContainer,
@@ -53,6 +54,14 @@ const contactInfo = [
 const SlideDrawer: React.FC<{
     setMenuOpen: (isOpen: boolean) => void;
 }> = ({ setMenuOpen }) => {
+    const navigate = useNavigate();
+    const handleNavClick = (
+        e: React.MouseEvent<HTMLLIElement>,
+        navigateTo: string
+    ): void => {
+        navigate(`/${navigateTo?.split(' ')[0]?.toLowerCase()}`);
+    };
+
     return (
         <DropdownMenu>
             <DropdownMenuContent>
@@ -77,7 +86,12 @@ const SlideDrawer: React.FC<{
                     </DropdownList>
                     <DropdownList className="slide-drawer-nav">
                         {navItems.map((navItem, index) => (
-                            <DropdownListItem key={index}>
+                            <DropdownListItem
+                                key={index}
+                                onClick={(e: React.MouseEvent<HTMLLIElement>) =>
+                                    handleNavClick(e, navItem)
+                                }
+                            >
                                 <DropdownListItemDiv>
                                     {navItem}
                                     <FaAngleRight />
