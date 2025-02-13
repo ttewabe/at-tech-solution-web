@@ -5,7 +5,8 @@ interface WallPaperProps {
 }
 
 export const WallPaper = styled.div<WallPaperProps>`
-    height: 85dvh;
+    width: 100%;
+    min-height: 75dvh;
     background-color: #efefef;
     background-image: url(${(props) => props.$backgroundimage});
     background-size: cover;
