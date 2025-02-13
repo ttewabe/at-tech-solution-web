@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
     WallPaper,
@@ -152,8 +153,12 @@ const HomeContent: React.FC = () => {
                         educational services.
                     </p>
                     <WallPaperButtons>
-                        <CustomButton>View Portfolio</CustomButton>
-                        <CustomButton>Contact Us</CustomButton>
+                        <Link to={'/portfolio'}>
+                            <CustomButton>View Portfolio</CustomButton>
+                        </Link>
+                        <Link to={'/contact'}>
+                            <CustomButton>Contact Us</CustomButton>
+                        </Link>
                     </WallPaperButtons>
                 </CompanyMoto>
             </WallPaper>
@@ -168,7 +173,9 @@ const HomeContent: React.FC = () => {
                     and social services to deliver comprehensive solutions that
                     make a real difference.
                 </p>
-                <CustomButton>Meet the Team</CustomButton>
+                <Link to={'/about'}>
+                    <CustomButton>Meet the Team</CustomButton>
+                </Link>
                 <ServicesGrid>
                     {services.map((service, index) => (
                         <ServiceCard key={index}>
