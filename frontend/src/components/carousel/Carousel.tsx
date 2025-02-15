@@ -1,7 +1,5 @@
-import {
-    ProjectLink,
-    ServiceCard,
-} from '../mainContent/homeContent/HomeContent.style';
+import { ProjectLink } from '../mainContent/homeContent/HomeContent.style';
+import { Card } from '../commonStyledComponents/CommonStyledComponents.style';
 import { CarouselStyled, CarouselWrapper } from './Carousel.style';
 import { FaAngleRight } from 'react-icons/fa';
 
@@ -56,11 +54,11 @@ export const Carousel: React.FC<CarouselProps> = ({
         <CarouselWrapper>
             <CarouselStyled {...settings} className={className}>
                 {items.map((item, index) => (
-                    <ServiceCard key={index}>
+                    <Card key={index}>
                         {useTitleCard ? (
-                            <ServiceCard className="title-card">
+                            <Card className="title-card">
                                 <h4>{item.title}</h4>
-                            </ServiceCard>
+                            </Card>
                         ) : (
                             <h4>{item.title}</h4>
                         )}
@@ -73,7 +71,7 @@ export const Carousel: React.FC<CarouselProps> = ({
                             </ProjectLink>
                         )}
                         {item.image && <img src={item.image} alt="carousel" />}
-                    </ServiceCard>
+                    </Card>
                 ))}
             </CarouselStyled>
         </CarouselWrapper>
