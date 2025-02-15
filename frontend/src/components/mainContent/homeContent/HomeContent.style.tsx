@@ -11,6 +11,18 @@ export const WallPaper = styled.div<WallPaperProps>`
     background-image: url(${(props) => props.$backgroundimage});
     background-size: cover;
     background-position: center;
+
+    @media (max-width: 480px) {
+        min-height: 80dvh;
+    }
+
+    @media (max-width: 400px) {
+        min-height: 90dvh;
+    }
+
+    @media (max-width: 300px) {
+        min-height: 100dvh;
+    }
 `;
 
 export const CompanyMoto = styled.div`
