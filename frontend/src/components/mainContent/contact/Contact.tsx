@@ -8,7 +8,7 @@ import {
     SubmitButton,
 } from './Contact.style';
 
-const Contact = () => {
+const Contact: React.FC = () => {
     return (
         <ContactWrapper>
             <ContactTitle>Contact Us</ContactTitle>
@@ -16,7 +16,7 @@ const Contact = () => {
                 <InputField type="text" placeholder="Your Name" required />
                 <InputField type="email" placeholder="Your Email" required />
                 <InputField type="text" placeholder="Subject" required />
-                <TextArea rows="6" placeholder="Your Message" required />
+                <TextArea rows={6} placeholder="Your Message" required />
                 <SubmitButton type="submit">Send Message</SubmitButton>
             </ContactForm>
         </ContactWrapper>
