@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-    SectionContentP,
-    SectionContentDiv,
-    TeamMember,
-    ContactInfo,
-} from './About.style';
+import { SectionContentP, SectionContentDiv, ContactInfo } from './About.style';
 import {
     MainWrapper,
     Section,

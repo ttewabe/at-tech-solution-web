@@ -44,30 +44,6 @@ export const SectionContentDiv = styled.div`
     }
 `;
 
-export const TeamMember = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
-
-    img {
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        margin-bottom: 1rem;
-    }
-
-    h4 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-        color: #666;
-    }
-`;
-
 export const ContactInfo = styled.div`
     font-size: 1.2rem;
     color: #333;
