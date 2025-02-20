@@ -106,6 +106,25 @@ Here are the new dependencies installed for the project:
         -   `frontend/src/assets/social-icon.png`
         -   `frontend/src/assets/web-development-icon.png`
 
+### [20 February 2025]
+
+-   **37ceb64**: Added the testimonial and award section for the portfolio page.
+    -   **File Changed**: `frontend/src/components/mainContent/portfolio/Portfolio.tsx`
+-   **ca4bca5**: Used the common styled components and used the data from the testimonials data file.
+    -   **File Changed**: `frontend/src/components/mainContent/homeContent/HomeContent.tsx`
+-   **d16254c**: Removed the unnecessary components since we use the components from commonStyledComponents.
+    -   **File Changed**: `frontend/src/components/mainContent/homeContent/HomeContent.style.tsx`
+-   **aaef92f**: Made the testimonial card image smaller and aligned it center.
+    -   **File Changed**: `frontend/src/components/commonStyledComponents/CommonStyledComponents.style.tsx`
+-   **206d7bc**: Made the root URL render the HomeContent in addition to when we navigate to /home.
+    -   **File Changed**: `frontend/src/AuthenticatedApp.tsx`
+-   **57b335d**: Used the testimonial data from the data file and also extracted out the render logic from the content and dynamically inserted it into the page.
+    -   **File Changed**: `frontend/src/components/mainContent/about/About.tsx`
+-   **fae4f8c**: Sent more props for configuration to make it more flexible.
+    -   **File Changed**: `frontend/src/components/carousel/Carousel.tsx`
+-   **97eb705**: Added the images to the data file so testimonial data users can access it.
+    -   **File Changed**: `frontend/src/commonData/data.ts`
+
 ### Other Changes
 
 -   Installed new dependencies and development dependencies to support features like charting, icons, and Storybook integration.
