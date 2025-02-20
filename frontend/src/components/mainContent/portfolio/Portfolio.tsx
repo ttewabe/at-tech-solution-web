@@ -10,7 +10,13 @@ import { ProjectGrid, ImpactGrid } from './Portfolio.style';
 
 import { StatCard } from '../../statCard/StatCard';
 
-import { projects, caseStudies, stats } from '../../../commonData/data';
+import {
+    projects,
+    caseStudies,
+    stats,
+    testimonials,
+    awards,
+} from '../../../commonData/data';
 
 import WebDevelopmentIcon from '../../../assets/web-development-icon.png';
 import MobileDevelopmentIcon from '../../../assets/mobile-development-icon.jpg';
@@ -18,6 +24,7 @@ import EducationIcon from '../../../assets/education-icon.png';
 import SocialIcon from '../../../assets/social-icon.png';
 
 import { FaCode, FaChartLine } from 'react-icons/fa6';
+import { Carousel } from '../../carousel/Carousel';
 
 const Portfolio: React.FC = () => {
     return (
@@ -135,19 +142,38 @@ const Portfolio: React.FC = () => {
             </Section>
 
             <Section id="awards" className="awards">
-                <SectionTitle>Recognition</SectionTitle>
-                <div className="awards-container">
-                    <div className="awards-list" id="awardsList"></div>
-                    <div className="press-mentions" id="pressMentions"></div>
+                <div className="vertical-container">
+                    <SectionTitle>Recognition</SectionTitle>
+                    <Card>
+                        {awards.map((award) => (
+                            <div className="left-align">
+                                <h3>{award.title}</h3>
+                                <p>{award.description}</p>
+                                <p>{award.year}</p>
+                            </div>
+                        ))}
+                    </Card>
                 </div>
             </Section>
 
             <Section id="testimonials" className="testimonials">
-                <SectionTitle>Client Testimonials</SectionTitle>
-                <div
-                    className="testimonials-slider"
-                    id="testimonialsSlider"
-                ></div>
+                <div className="vertical-container">
+                    <SectionTitle>Client Testimonials</SectionTitle>
+                    <Carousel
+                        items={testimonials.map((testimonial) => ({
+                            title: testimonial.quote,
+                            description: [
+                                testimonial.author,
+                                testimonial.company,
+                            ],
+                        }))}
+                        showButton={false}
+                        useTitleParagraph={true}
+                        useTitleCard={false}
+                        className={'always-visible'}
+                        cardContentClassName={'left-align'}
+                    />
+                </div>
             </Section>
         </MainWrapper>
     );
