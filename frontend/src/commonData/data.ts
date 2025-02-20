@@ -1,3 +1,6 @@
+import clientImage1 from '../assets/client-graph.jpg';
+import clientImage2 from '../assets/client-buildings.jpg';
+
 export const awards = [
     {
         title: 'Best Digital Innovation',
@@ -115,15 +118,18 @@ export const testimonials = [
         quote: "TechCraft Solutions transformed our business with their innovative approach to e-commerce. Their team's expertise and dedication were outstanding.",
         author: 'Sarah Johnson',
         company: 'Global Retail Co.',
+        image: clientImage1,
     },
     {
         quote: 'The mobile app they developed exceeded our expectations in every way. User engagement has never been higher.',
         author: 'Michael Chen',
         company: 'HealthTech Solutions',
+        image: clientImage2,
     },
     {
         quote: 'Their coding education platform has revolutionized how we teach programming. The results speak for themselves.',
         author: 'Dr. James Wilson',
         company: 'TechEd Institute',
+        image: '',
     },
 ];
