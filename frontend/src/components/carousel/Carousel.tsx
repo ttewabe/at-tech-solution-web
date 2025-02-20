@@ -1,5 +1,7 @@
-import { ProjectLink } from '../mainContent/homeContent/HomeContent.style';
-import { Card } from '../commonStyledComponents/CommonStyledComponents.style';
+import {
+    Card,
+    CardLink,
+} from '../commonStyledComponents/CommonStyledComponents.style';
 import { CarouselStyled, CarouselWrapper } from './Carousel.style';
 import { FaAngleRight } from 'react-icons/fa';
 
@@ -14,6 +16,8 @@ interface CarouselProps {
     className?: string;
     showButton?: boolean;
     useTitleCard?: boolean;
+    useTitleParagraph?: boolean;
+    cardContentClassName?: string;
 }
 
 export const Carousel: React.FC<CarouselProps> = ({
@@ -21,6 +25,8 @@ export const Carousel: React.FC<CarouselProps> = ({
     className,
     showButton = true,
     useTitleCard = true,
+    useTitleParagraph = false,
+    cardContentClassName = 'center-align',
 }) => {
     const settings: any = {
         dots: true,
@@ -55,22 +61,32 @@ export const Carousel: React.FC<CarouselProps> = ({
             <CarouselStyled {...settings} className={className}>
                 {items.map((item, index) => (
                     <Card key={index}>
-                        {useTitleCard ? (
-                            <Card className="title-card">
+                        <div className={cardContentClassName}>
+                            {useTitleCard ? (
+                                <Card className="title-card">
+                                    {useTitleParagraph ? (
+                                        <p>{item.title}</p>
+                                    ) : (
+                                        <h4>{item.title}</h4>
+                                    )}
+                                </Card>
+                            ) : useTitleParagraph ? (
+                                <p>{item.title}</p>
+                            ) : (
                                 <h4>{item.title}</h4>
-                            </Card>
-                        ) : (
-                            <h4>{item.title}</h4>
-                        )}
-                        {item.description.map((desc, i) => (
-                            <p key={i}>{desc}</p>
-                        ))}
-                        {showButton && (
-                            <ProjectLink>
-                                View Project <FaAngleRight />
-                            </ProjectLink>
-                        )}
-                        {item.image && <img src={item.image} alt="carousel" />}
+                            )}
+                            {item.description.map((desc, i) => (
+                                <p key={i}>{desc}</p>
+                            ))}
+                            {showButton && (
+                                <CardLink>
+                                    View Project <FaAngleRight />
+                                </CardLink>
+                            )}
+                            {item.image && (
+                                <img src={item.image} alt="carousel" />
+                            )}
+                        </div>
                     </Card>
                 ))}
             </CarouselStyled>
