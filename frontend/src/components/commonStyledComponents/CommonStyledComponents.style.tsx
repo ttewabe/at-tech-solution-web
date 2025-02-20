@@ -74,9 +74,20 @@ export const Card = styled.div`
         min-height: 1rem;
     }
 
+    .center-align {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .left-align {
         text-align: left;
         width: 100%;
+    }
+
+    img {
+        max-width: 75%;
     }
 
     h4 {
