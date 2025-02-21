@@ -1,18 +1,12 @@
 import styled from 'styled-components';
 
-export const MainContent = styled.div`
-    width: 100%;
-    padding-bottom: 4rem;
-    min-height: 80dvh;
-    min-width: 320px;
-`;
-
 interface WallPaperProps {
     $backgroundimage: string;
 }
 
 export const WallPaper = styled.div<WallPaperProps>`
-    height: 85dvh;
+    width: 100%;
+    min-height: 75dvh;
     background-color: #efefef;
     background-image: url(${(props) => props.$backgroundimage});
     background-size: cover;
@@ -64,28 +58,6 @@ export const CompanyMoto = styled.div`
         h1 {
             font-size: 2rem;
         }
-    }
-`;
-
-export const AboutSection = styled.section`
-    width: 70%;
-    text-align: center;
-    position: relative;
-    left: 15%;
-    margin-bottom: 4rem;
-
-    .featured-projects {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: 1024px) {
-        width: 80%;
-        left: 10%;
-    }
-
-    @media (max-width: 768px) {
-        width: 90%;
-        left: 5%;
     }
 `;
 
