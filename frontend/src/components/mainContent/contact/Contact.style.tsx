@@ -6,6 +6,7 @@ export const ContactWrapper = styled.div`
 `;
 
 export const ContactTitle = styled.h1`
+    text-align: center;
     width: 50%;
     margin: 0 auto;
     font-size: 2rem;
@@ -26,18 +27,13 @@ export const ContactForm = styled.form`
     @media (max-width: 480px) {
         width: 90%;
     }
-    padding: 1rem;
-        border-radius: 10px;
-        border: 1px solid #b8860b;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3)
-    font-size: 1rem;
-    resize: none;
     > div > span {
         display: flex;
         flex-direction: column;
         font-size: 14px;
         > input {
          hight: 30px;
+         left:10px;
             border-radius: 5px;
             border: 0.1px solid #b8860b;
             padding: 1rem;
@@ -45,7 +41,7 @@ export const ContactForm = styled.form`
             font-size: 1rem;
         }
             >label {
-l               eft: 10px;
+            padding: 5px;
                 font-size: 14px;
                 color: #333;
             }
@@ -53,14 +49,14 @@ l               eft: 10px;
 `;
 
 export const ErrorMessage = styled.div`
+    padding: 5px;
     color: red;
     font-size: 12px;
     margin-top: 1px;
-    left: 10px;
 `;
 
 export const TextArea = styled.textarea`
-    left: 10px;
+    left: 5px;
     padding: 1rem;
     border-radius: 10px;
     border: 0.1px solid #b8860b;

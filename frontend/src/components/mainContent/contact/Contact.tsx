@@ -16,7 +16,6 @@ const validationSchema: Yup.ObjectSchema<{
     name: string;
     email: string;
     subject: string;
-    message: string;
 }> = Yup.object().shape({
     name: Yup.string()
         .matches(/^[A-Za-z\s]+$/, 'Name must only contain letters')
@@ -27,9 +26,7 @@ const validationSchema: Yup.ObjectSchema<{
     subject: Yup.string()
         .max(70, 'Subject must be 100 characters or less')
         .required('Subject is required'),
-    message: Yup.string()
-        .max(1000, 'Message must be 500 characters or less')
-        .required('Message is required'),
+    message: Yup.string(),
 });
 
 const Contact: React.FC = () => {
@@ -136,6 +133,7 @@ const Contact: React.FC = () => {
                             value={message}
                             onChange={handleMessageChange}
                             onBlur={handleBlur}
+                            className={message ? 'p-filled' : ''} // Ensures label moves up when filled
                         />
                         <label htmlFor="message">Your Message</label>
                     </FloatLabel>
