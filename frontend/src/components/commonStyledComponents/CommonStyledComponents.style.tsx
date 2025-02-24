@@ -26,6 +26,32 @@ export const Section = styled.section`
         gap: 1rem;
     }
 
+    .horizontal-container.uneven.left-bigger {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        .left {
+            flex: 2;
+        }
+        .right {
+            flex: 1;
+        }
+    }
+
+    .horizontal-container.uneven.right-bigger {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        .left {
+            flex: 1;
+        }
+        .right {
+            flex: 2;
+        }
+    }
+
     @media (max-width: 1024px) {
         width: 80%;
     }
