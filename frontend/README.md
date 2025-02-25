@@ -125,6 +125,26 @@ Here are the new dependencies installed for the project:
 -   **97eb705**: Added the images to the data file so testimonial data users can access it.
     -   **File Changed**: `frontend/src/commonData/data.ts`
 
+### [25 February 2025]
+
+-   **aa92593**: Refactor services list to use objects with titles and links for improved navigation and use links to the services sections.
+    -   **File Changed**: `frontend/src/components/slideDrawer/SlideDrawer.tsx`
+-   **05abd63**: Add navigation functionality to menu items which link to different sections of services page.
+    -   **File Changed**: `frontend/src/components/menuDetails/MenuDetails.tsx`
+-   **7f92669**: Add smooth scrolling functionality to service sections for improved navigation.
+    -   **File Changed**: `frontend/src/components/mainContent/services/Services.tsx`
+-   **c1905d0**: Add services section with images and descriptions to enhance service offerings part.
+    -   **Files Changed**:
+        -   `frontend/src/assets/coding-education.jpg`
+        -   `frontend/src/assets/other-services.jpg`
+        -   `frontend/src/assets/services.jpg`
+        -   `frontend/src/assets/software-development.jpg`
+        -   `frontend/src/components/mainContent/services/Services.tsx`
+-   **d0f0338**: Add styled components for service list and image containers.
+    -   **File Changed**: `frontend/src/components/mainContent/services/Services.style.tsx`
+-   **91e4c28**: Add uneven horizontal container styles for flexible layout.
+    -   **File Changed**: `frontend/src/components/commonStyledComponents/CommonStyledComponents.style.tsx`
+
 ### Other Changes
 
 -   Installed new dependencies and development dependencies to support features like charting, icons, and Storybook integration.
