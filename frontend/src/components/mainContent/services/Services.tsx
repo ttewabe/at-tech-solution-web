@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import {
     MainWrapper,
     Section,
@@ -13,8 +13,47 @@ import ServicesImage from '../../../assets/services.jpg';
 import CodingEducation from '../../../assets/coding-education.jpg';
 import SoftwareDevelopment from '../../../assets/software-development.jpg';
 import OtherServices from '../../../assets/other-services.jpg';
+import { useLocation } from 'react-router-dom';
 
 const Services: React.FC = () => {
+    const location = useLocation();
+    const softwareDevelopmentRef = useRef<HTMLElement>(null);
+    const educationServicesRef = useRef<HTMLElement>(null);
+    const otherServicesRef = useRef<HTMLElement>(null);
+
+    const scrollToSection = useCallback((hash: string) => {
+        if (
+            hash === '#software-development' &&
+            softwareDevelopmentRef.current
+        ) {
+            softwareDevelopmentRef.current.scrollIntoView({
+                behavior: 'smooth',
+            });
+        } else if (
+            hash === '#education-services' &&
+            educationServicesRef.current
+        ) {
+            educationServicesRef.current.scrollIntoView({ behavior: 'smooth' });
+        } else if (hash === '#other-services' && otherServicesRef.current) {
+            otherServicesRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, []);
+
+    useEffect(() => {
+        scrollToSection(window.location.hash);
+    }, [scrollToSection, location]);
+
+    useEffect(() => {
+        const handleHashChange = () => {
+            scrollToSection(window.location.hash);
+        };
+
+        window.addEventListener('hashchange', handleHashChange);
+        return () => {
+            window.removeEventListener('hashchange', handleHashChange);
+        };
+    }, [scrollToSection]);
+
     return (
         <MainWrapper>
             <Section>
@@ -29,7 +68,7 @@ const Services: React.FC = () => {
             </Section>
 
             {/* Software Development Section */}
-            <Section>
+            <Section ref={softwareDevelopmentRef} id="software-development">
                 <SectionTitle>Software Development</SectionTitle>
                 <div className="horizontal-container uneven left-bigger">
                     <ServiceList className="left">
@@ -62,7 +101,7 @@ const Services: React.FC = () => {
             </Section>
 
             {/* Education Services Section */}
-            <Section>
+            <Section ref={educationServicesRef} id="education-services">
                 <SectionTitle>Education Services</SectionTitle>
                 <div className="horizontal-container uneven right-bigger">
                     <ImageContainerSmall className="left">
@@ -94,7 +133,7 @@ const Services: React.FC = () => {
             </Section>
 
             {/* Other Services Section */}
-            <Section>
+            <Section ref={otherServicesRef} id="other-services">
                 <SectionTitle>Other Services</SectionTitle>
                 <div className="horizontal-container uneven left-bigger">
                     <ServiceList className="left">
