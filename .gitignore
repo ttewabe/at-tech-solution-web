@@ -21,3 +21,31 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# after creating the dotnet files
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Coverage results
+TestResults
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Rider/JetBrains IDE files
+.idea/
+*.sln.iml
+
+# Other settings
+.vscode/
+
+# Environment files
+.env
