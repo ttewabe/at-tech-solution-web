@@ -90,7 +90,7 @@ namespace backend.Data
 
             modelBuilder.Entity<ContactSubmission>(entity =>
             {
-                entity.ToTable("contact_submission");
+                entity.ToTable("contact_submissions");
                 entity.Property(e => e.Id).HasColumnName("id");
                 entity.Property(e => e.Name).HasColumnName("name");
                 entity.Property(e => e.Email).HasColumnName("email");
