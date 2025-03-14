@@ -25,6 +25,7 @@ yarn-error.log*
 # after creating the dotnet files
 # Build Folders
 bin/
+.vs/
 obj/
 
 # User-specific files
