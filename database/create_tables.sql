@@ -1,6 +1,16 @@
 -- Connect to the target database
 \c at_tech_db
 
+-- Create the 'contact_submission' table if it doesn't exist
+CREATE TABLE IF NOT EXISTS contact_submissions (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    subject VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Create the 'users' table if it doesn't exist
 CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
@@ -50,10 +60,10 @@ CREATE TABLE IF NOT EXISTS comments (
     user_id INT NOT NULL,
     comment_text TEXT NOT NULL,
     comment_date timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
-    parrent_comment_id INT,
+    parent_comment_id INT,
     FOREIGN KEY (post_id) REFERENCES blog_posts(id),
     FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (parrent_comment_id) REFERENCES comments(id)
+    FOREIGN KEY (parent_comment_id) REFERENCES comments(id)
 );
 
 -- Create the 'votes' table if it doesn't exist
@@ -74,7 +84,7 @@ CREATE ROLE readonly_user WITH LOGIN PASSWORD '${READONLY_PASSWORD}';
 CREATE ROLE readwrite_user WITH LOGIN PASSWORD '${READWRITE_PASSWORD}';
 
 -- Grant permissions to the roles
-GRANT CONNECT ON DATABASE your_database_name TO readonly_user, readwrite_user;
+GRANT CONNECT ON DATABASE at_tech_db TO readonly_user, readwrite_user;
 GRANT USAGE ON SCHEMA public TO readonly_user, readwrite_user;
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO readonly_user;
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO readwrite_user;
