@@ -1,11 +1,11 @@
-import axios, { AxiosResponse, AxiosError } from "axios";
+import axios, { AxiosResponse, AxiosError } from 'axios';
 
-const BASE_URL = "http://localhost:5189/api";
+const BASE_URL = 'http://localhost:5189/api';
 
 export const api = axios.create({
     baseURL: BASE_URL,
     headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
     },
     timeout: 100000, // Set a timeout for requests (optional)
 });
@@ -37,7 +37,7 @@ export const getData = async (endpoint: string) => {
 // POST request
 export const postData = async (endpoint: string, data: any) => {
     try {
-        console.log("data", data);
+        console.log('data', data);
         const response = await api.post(endpoint, data);
         return response.data;
     } catch (error) {
