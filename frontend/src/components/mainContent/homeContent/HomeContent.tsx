@@ -160,7 +160,7 @@ const HomeContent: React.FC = () => {
                     {services.map((service, index) => (
                         <Card key={index}>
                             <CardIcon>
-                                <img alt="" src={service.icon} />
+                                <img alt="" src={service.icon} loading="lazy" />
                             </CardIcon>
                             <h4>{service.title}</h4>
                             {service.description.map((desc) => (

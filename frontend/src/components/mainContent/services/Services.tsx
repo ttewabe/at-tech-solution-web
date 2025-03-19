@@ -63,7 +63,7 @@ const Services: React.FC = () => {
                     to notary services to meet your needs:
                 </p>
                 <ImageContainer>
-                    <img alt="img" src={ServicesImage} />
+                    <img alt="img" src={ServicesImage} loading="lazy" />
                 </ImageContainer>
             </Section>
 
@@ -95,7 +95,11 @@ const Services: React.FC = () => {
                         </li>
                     </ServiceList>
                     <ImageContainerSmall className="right">
-                        <img alt="img" src={SoftwareDevelopment} />
+                        <img
+                            alt="img"
+                            src={SoftwareDevelopment}
+                            loading="lazy"
+                        />
                     </ImageContainerSmall>
                 </div>
             </Section>
@@ -105,7 +109,7 @@ const Services: React.FC = () => {
                 <SectionTitle>Education Services</SectionTitle>
                 <div className="horizontal-container uneven right-bigger">
                     <ImageContainerSmall className="left">
-                        <img alt="img" src={CodingEducation} />
+                        <img alt="img" src={CodingEducation} loading="lazy" />
                     </ImageContainerSmall>
                     <ServiceList className="right">
                         <li>
@@ -159,7 +163,7 @@ const Services: React.FC = () => {
                         </li>
                     </ServiceList>
                     <ImageContainerSmall className="right">
-                        <img alt="img" src={OtherServices} />
+                        <img alt="img" src={OtherServices} loading="lazy" />
                     </ImageContainerSmall>
                 </div>
             </Section>

@@ -84,7 +84,11 @@ export const Carousel: React.FC<CarouselProps> = ({
                                 </CardLink>
                             )}
                             {item.image && (
-                                <img src={item.image} alt="carousel" />
+                                <img
+                                    src={item.image}
+                                    alt="carousel"
+                                    loading="lazy"
+                                />
                             )}
                         </div>
                     </Card>
