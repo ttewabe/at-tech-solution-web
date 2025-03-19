@@ -11,6 +11,7 @@ import {
     SubmitButton,
     ErrorMessage,
 } from './Contact.style';
+import { postData } from '../../../api';
 
 const validationSchema: Yup.ObjectSchema<{
     name: string;
@@ -41,6 +42,9 @@ const Contact: React.FC = () => {
         initialValues: { name: '', email: '', subject: '', message: '' },
         validationSchema,
         onSubmit: (values, { resetForm }) => {
+            postData('/contactSubmissions', values)
+                .then((resp) => console.log(resp))
+                .catch((error) => console.error(error));
             alert(JSON.stringify(values, null, 2));
             resetForm();
         },
