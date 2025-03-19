@@ -145,6 +145,21 @@ Here are the new dependencies installed for the project:
 -   **91e4c28**: Add uneven horizontal container styles for flexible layout.
     -   **File Changed**: `frontend/src/components/commonStyledComponents/CommonStyledComponents.style.tsx`
 
+### [14 March 2025]
+
+-   **f578865**: use the api and submit to the backend
+    -   **File Changed**: `frontend/src/components/mainContent/contact/Contact.tsx`
+-   **5b3145b**: add api file with CRUD request methods using axios for client api connection needs
+    -   **File Changed**: `frontend/src/api.ts`
+-   **2c89da1**: update axios to version 1.8.3 and adjust dependencies in package.json and package-lock.json
+    -   **File Changed**:
+        -   `frontend/package-lock.json`
+        -   `frontend/package.json`
+-   **82a4482**: add .vs/ to .gitignore to exclude Visual Studio user-specific files
+    -   **File Changed**: .gitignore
+-   **911572b**: cors policy added to allow specific origins
+    -   **File Changed**: backend/Program.cs
+
 ### Other Changes
 
 -   Installed new dependencies and development dependencies to support features like charting, icons, and Storybook integration.
