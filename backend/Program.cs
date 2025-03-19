@@ -27,7 +27,6 @@ builder.Services.AddCors(options =>
                    .AllowAnyHeader();
         });
 });
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -45,6 +44,8 @@ app.UseRouting();
 app.UseCors("MyPolicy");
 
 app.UseAuthorization();
+
+app.MapControllers();
 
 app.MapControllers();
 
